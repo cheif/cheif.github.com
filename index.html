@@ -1,49 +1,5 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dan Berglund by cheif</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Dan Berglund</h1>
-        <p class="header">danberglund.se</p>
-
-
-
-        <ul>
-          <li><a class="buttons github" href="https://github.com/cheif">GitHub Profile</a></li>
-        </ul>
-
-      </header>
-      <section>
-        <h1>Car computer</h1>
-
-<p>Me and my girlfriend recently purchased a car, a <a href="http://en.wikipedia.org/wiki/Vw_polo#Polo_Mark_V_.28Typ_6R.2C_2009.E2.80.93present.29">2010 VW Polo</a>, and as a engineer I have of course thought of things that is missing from the car, that I can add myself.</p>
-
-<p>The first thing I would like to add to the car is some system that recognizes me or my girlfriend as we approach the car, and unlocks itself. The next step would be for the car to be able to start without the normal turn of the key, but that is a project for later.</p>
-
-<p>After thinking this through I have realized that the most appropriate way probably would be to have a bluetooth-device in the car, and when a connection is detected the device sends a signal over the CAN-bus to unlock the doors. A similar project utilizing the CAN bus can be found here: <a href="http://secuduino.blogspot.com/">secuduino</a> opening the doors is not performed, but I assume that will only be a slight modification in the command sent.</p>
-
-<p>I was first thinking of using my <a href="http://www.raspberrypi.org/">Raspberry PI</a> as the main-unit of my device, but soon realized that it consumed way to much power, about 500mA is the numbers I found, so I ordered a arduino instead: <a href="http://www.aliexpress.com/item/Nano-V3-0-AVR-ATmega328-P-20AU-Module-Board-USB-Cable-for-Arduino-Blue-Black/728568814.html">Arduino Nano</a> and a bluetooth chip: <a href="http://www.aliexpress.com/item/Bluetooth-pass-through-modules-with-universal-mounting-with-Enable-and-state-output-wireless-serial-from-machine/658943620.html">Arduino Bluetooth Module</a></p>
-
-<p>With these two I hope to be able to pair my phone and send a command once paired working, then I will have to find a chip for communicating to the CAN-bus, I have ordered <a href="http://ww1.microchip.com/downloads/en/devicedoc/21801e.pdf">this</a> and will try use it when it arrives.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
-  </body>
-</html>
+---
+layout: default
+---
+{% assign first_post = site.posts.first %}
+{{ first_post.content }}

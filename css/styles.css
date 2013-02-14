@@ -235,8 +235,13 @@ h1.header {
 	margin-top: 0;
 }
 
+h2.header {
+	font-family: Arvo, sans-serif;
+	font-weight: 300;
+}
 
-h1.header, a.header, a.name, header a{
+
+h1.header, h2.header, a.header, a.name, header a{
 	color: #fff;
 }
 
